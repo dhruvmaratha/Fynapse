@@ -1,0 +1,142 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    //background-color: #ffffff; /* Darker green background for the webpage */
+    background-image: url("C:\Users\hetvr\OneDrive\Desktop\SE Project\Background image.jpg"); /* Add a background image with finance-related symbols */
+    background-size: cover;
+    background-position: center;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.app-name {
+    display: flex;
+    align-items: center;
+    font-size: 2.5em; /* Larger font size for the app name */
+    color: #0f8400; /* White color for the app name */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Slight shadow for better readability */
+}
+
+.app-name .logo-placeholder {
+    width: 2.5em; /* Larger size for the logo placeholder */
+    height: 2.5em;
+    margin-top: -0.5em;
+    background-color: #cccccc; /* Placeholder color */
+    border-radius: 50%;
+    margin-right: 20px; /* Spacing between logo and text */
+}
+
+
+.login-box {
+    background-color: #ffffff   ; /* White box background */
+    //backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+    padding: 30px;
+    width: 350px; /* Increased width for a larger box */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.create-account-btn {
+    background-color: #4CAF50; /* Darker light green create account button */
+    color: #ffffff; /* White text color */
+    padding: 12px 25px; /* Increased padding for a larger button */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.create-account-btn:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+.brand-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: #cccccc; /* Placeholder color */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.input-container {
+    margin-bottom: 20px; /* More vertical space between input fields */
+    text-align: left;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333; /* Dark text color */
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 5px;
+}
+
+.login-btn {
+    background-color: #008000; /* Green login button */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 12px 25px; /* Increased padding for a larger button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* More vertical space below the login button */
+}
+
+.login-btn:hover {
+    background-color: #006400; /* Darker green on hover */
+}
+
+.forgot-password {
+    margin-top: 10px;
+    margin-bottom: 20px; /* More vertical space below the forgot password link */
+}
+
+.forgot-password a {
+    color: #0000ff; /* Blue color for the forgot password link */
+    text-decoration: none;
+}
+
+.create-account {
+    margin-top: 10px;
+}
+
+.create-account .create-account-btn {
+    background-color: #4CAF50; /* Darker light green create account button */
+    color: #ffffff; /* White text color */
+    padding: 12px 25px; /* Increased padding for a larger button */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.create-account .create-account-btn:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Finapse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="images/Logo.png" alt="Finapse Logo" class="logo-image">
+                <h1 class="logo-text">Finapse</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <!-- <li><a href="#">Investments</a></li> -->
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h2>Login to Finapse</h2>
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p style="text-align: center;">Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+
+    <div>
+        <p style="text-align: center;">OR</p>
+        <button class="social-login Google">Continue with Google</button>
+        <button class="social-login microsoft ">Continue with Microsoft Account</button>
+        <button class="social-login apple">Continue with Apple</button>
+     </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Finapse. All rights reserved.</p>
+    </footer>
+</body>
+</html>

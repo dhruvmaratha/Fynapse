@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fynapse - Financial Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main Navigation">
+            <figure class="logo">
+                <h1>Finapse</h1>
+            </figure>
+            <ul>
+                <li><a href="#" title="Home">Home</a></li>
+                <li><a href="#" title="Features">Features</a></li>
+                <li><a href="#" title="Pricing">Pricing</a></li>
+                <li><a href="#" title="Contact">Contact</a></li>
+                <li><a href="#" title="Login" class="button" id="login-button">Login</a></li>
+                <li><a href="#" title="Sign up" class="button" id="signup-button">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Manage Your Finances Easily with Fynapse</h2>
+            <p>Track your spending, manage budgets, and achieve your financial goals all in one place.</p>
+            <a href="#" title="Get started with Fynapse" class="button">Get Started</a>
+        </section>
+        <section class="features">
+            <h3>Features</h3>
+            <aside class="feature-item">
+                <h4>Comprehensive Budgeting</h4>
+                <p>Create and manage your budgets with ease, ensuring you stay on track with your spending.</p>
+            </aside>
+            <aside class="feature-item">
+                <h4>Investment Tracking</h4>
+                <p>Monitor your investments and make informed decisions to optimize your portfolio.</p>
+            </aside>
+            <aside class="feature-item">
+                <h4>Goal Setting</h4>
+                <p>Set financial goals and track your progress, helping you achieve your financial dreams.</p>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Fynapse. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign up Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign up</h2>
+            <form id="signup-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password"><br><br>
+                <input type="submit" value="Sign up">
+            </form>
+        </div>
+    </div>
+<script>
+    // Get the modal elements
+var loginModal = document.getElementById("login-modal");
+var signupModal = document.getElementById("signup-modal");
+
+// Get the button elements
+var loginButton = document.getElementById("login-button");
+var signupButton = document.getElementById("signup-button");
+
+// Get the close elements
+var loginClose = loginModal.querySelector(".close");
+var signupClose = signupModal.querySelector(".close");
+
+// Add event listeners to the buttons
+loginButton.addEventListener("click", function() {
+  loginModal.style.display = "block";
+});
+
+signupButton.addEventListener("click", function() {
+  signupModal.style.display = "block";
+});
+
+// Add event listeners to the close buttons
+loginClose.addEventListener("click", function() {
+  loginModal.style.display = "none";
+});
+
+signupClose.addEventListener("click", function() {
+  signupModal.style.display = "none";
+});
+
+// Add event listener to the login form
+document.getElementById("login-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  // TO DO: Add login functionality here
+  console.log("Login form submitted");
+});
+
+// Add event listener to the sign up form
+document.getElementById("signup-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  // TO DO: Add sign up functionality here
+  console.log("Sign up form submitted");
+});
+
+// Add event listener to the window to close the modals when clicked outside
+window.addEventListener("click", function(event) {
+  if (event.target == loginModal) {
+    loginModal.style.display = "none";
+  }
+  if (event.target == signupModal) {
+    signupModal.style.display = "none";
+  }
+});
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Finapse</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function submitSignupForm(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            fetch('http://localhost:3000/signup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(Object.fromEntries(formData))
+            }).then(response => response.json())
+              .then(data => {
+                  console.log('Success:', data);
+                  window.location.href = 'bank-details.html?email=' + data.email;
+              })
+              .catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="images/Logo.png" alt="Finapse Logo" class="logo-image">
+                <h1 class="logo-text">Finapse</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <!-- <li><a href="#">Investments</a></li> -->
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html" class="button">Log in</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h2>Create a Finapse Account</h2>
+            <form onsubmit="submitSignupForm(event)" action="/signup" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                <button type="submit"><a href="bank-details.html">Sign Up</a></button>
+            </form>
+            <p style="text-align: center;">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Finapse. All rights reserved.</p>
+    </footer>
+</body>
+</html>
